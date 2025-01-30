@@ -8,10 +8,13 @@ from bs4 import BeautifulSoup
 import threading
 import matplotlib.pyplot as plt
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Configurações do e-mail
-EMAIL_USER = os.getenv('EMAIL_USER', 'contato.tecnica.epc@mailo.com')
-EMAIL_PASS = os.getenv('EMAIL_PASS', 'Tecnica@123')
+EMAIL_USER = os.getenv('EMAIL_USER')
+EMAIL_PASS = os.getenv('EMAIL_PASS')
 RADIO_URLS = {
     'tabajara': 'http://stm2.xcast.com.br:7524/index.html?sid=1',
     'parahyba': 'http://stm1.xcast.com.br:9538/index.html?sid=1'
